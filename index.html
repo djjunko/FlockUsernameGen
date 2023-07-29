@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Djjunko">
+    <meta name="author" content="Djjunko">
+    <link rel= "icon" type= "image/png" href= "favicon.png">
+    <title>Welcome | Homepage </title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles/app.css" />
+   
+    
+  </head>
+  <body>
+      <header>
+ <nav>
+            <ul>
+                <li><a href="#"> Home </a></li>
+                
+                
+                <li><a href="#"> Policy  </a></li>
+            
+                <li><a href="#"> <strong>Donate</strong> </a></li>
+            </ul>
+        </nav>
+        
+      <h1> <img src="flocklogo.png" style="height: 120px" alt="logo">Flock UsernameGen</h1>
+    </header>
+    <main>
+       
+       
+<br>
+<br>
+
+
+         
+      
+      <center>  <p id="username" style="padding-top: 20px;"></p></center>
+        <br>
+	<button id="generate-button"><strong>Generate</strong></button>
+  
+   
+     
+
+  
+    
+    </main>
+    
+
+   
+    
+    <footer>
+      
+        
+    
+       &copy; 2023  Created by <a href="https://github.com/djjunko" style="text-decoration: none; color: white; ">github.com/djjunko</a>
+
+
+        </footer>
+      
+    
+     <script>
+     
+      function generateUsername() {
+        const adjectives = ['happy', 'silly', 'curious', 'clever', 'brave', 'friendly', 'jovial', 'witty',
+                           
+                       'Saviors',
+  'GuardianAngels',
+  'Heroes365',
+  'Caregivers',
+  'Lifesavers',
+  'Frontliners',
+  'Fighters',
+  'Vital',
+  'Important',
+  'Essential',
+  'Dedicated',
+  'Committed',
+  'Hardworking',
+  'Selfless',  'Fearless',
+  'Ferocious',
+  'Vicious',
+  'Feral',
+  'Savage',
+  'Intense',
+  'Powerful',
+  'Graceful',
+  'Agile',
+  'Elegant', 
+     'fierce',
+  'brave',
+  'determined',
+  'tough',
+  'skilled',
+  'experienced',
+  'quick',
+  'agile',
+  'strategic',
+  'aggressive',
+  'relentless',
+  'confident',
+  'powerful',
+  'cunning',
+  'sly',
+  'streetsmarts',  
+     'Brave',
+  'Courageous',
+  'Fearless',
+  'Strong',
+  'Powerful',
+  'Passionate',
+  'Determined',
+  'Confident',
+  'Disciplined',
+  'Loyal',
+  'Protective',
+  'Respectful',
+  'Supportive',
+  'Hardworking',
+  'Humble',
+  'Honorable',
+  'Compassionate',
+  'Wise',
+  'Just',
+  'Fair',
+  'Braveheart',
+  'Chivalrous',
+  'Gallant',
+  'Intrepid',
+  'Lionhearted',
+  'Resolute',
+  'Steadfast',
+  'Valorous',
+  'Victorious',
+  'Zealous',                        
+                            
+                            
+                            
+                            
+                           ];
+  
+        
+        
+        
+        
+        const nouns = [
+           'fighter',
+  'soldier',
+  'samurai',
+  'rogue',
+  'knight',
+  'hero',
+  'battler',
+  'crusader',
+  'brave',
+  'war',
+  'mage',
+  'combatant',
+  'combat',
+  'hunter',
+  'demon',
+  'guerrilla',
+  'sword',
+  'warrior',
+  'protector',
+  'beast',
+  'god',
+  'paladin',
+  'ass kicking',
+  'quest',
+  'declaration of war',
+  'enemy',
+  'caste',
+  'butt kicking',
+  'battle-hardened',
+  'tank',
+  'druid',
+  'indomitable',
+  'bloodthirsty',
+  'guardian',
+  'cavalryman',
+  'marauder',
+  'civil war',
+  'archetype',
+  'wily',
+  'priest',
+  'tough',
+  'superhero',
+  'archer',
+  'fiercecompetitor',
+  'grizzled',
+  'assassin',
+  'cavalry',
+  'goddess',
+  'hogan',
+  'loner',
+  'alpha male',
+  'nobleman',
+  'necro',
+  'martyr',
+  'scrapper',
+  'monk',
+  'dreamer',
+  'headstrong',
+  'pally',
+  'ranger',
+  'glorious',
+  'dragon',
+  'healer',
+  'guy',
+  'ret',
+  'blood',
+  'barbarian',
+  'pragmatist',
+  'brawler',
+  'macho',
+  'scrappy',
+  'haggler',
+  'valiance',
+  'mystic',
+  'mercenary',
+  'prophet',
+  'shaman',
+  'thief',
+  'rifleman',
+  'rambo',
+  'emperor',
+  'warlock',
+  'ninja',
+  'online',
+  'cowboy',
+  'lord',
+  'righteous',
+  'battle',
+  'wizard',
+  'king',
+  'quitter',
+  'pretender',
+  'berserker',
+  'brute',
+  'leader',
+  'general',
+  'taciturn',
+  'savages',
+  'embodiment',
+  'zealot',
+  'melee',
+  'expert',
+  'savage',
+  'vengeful',
+  'scout',
+  'warriors',
+  'overachiever',
+  'heroine',
+  'bruiser',
+  'storm',
+  'inquisitor',
+  'archetypal',
+  'martial',
+  'hpal',
+  'sorcerer',
+  'solo',
+  'gym rat',
+  'dude',
+  'military',
+  'crucible',
+  'antihero',
+  'adventurer',
+  'cleric',
+  'master',
+  'bonesteel',
+  'sniper',
+  'equipment',
+  'cyborg',
+  'idealist',
+  'weapon',
+  'spirit',
+  'deity',
+  'magic',
+  'chosen',
+  'noble',
+  'fire',
+  'boots',
+  'support',
+  'mad',
+  'heroes',
+  'mortal',
+  'swordsman',
+  'pala',
+  'slinger',
+  'laker',
+  'country',
+  'belligerent',
+  'heroic',
+  'gladiator',
+  'survivor',
+  'guard',
+  'spellcaster',
+  'champion',
+  'warfare',
+  'clan',
+  'warlord',
+  'somebody',
+  'someone',
+  'person',
+  'monster',
+  'viking',
+  'bard',
+  'worker',
+  'dark',
+  'time',
+  'stealth',
+  'barb',
+  'goliath',
+  'insurgent',
+  'irregular',
+  'immortal',
+  'guerilla',
+  'conqueror',
+  'rouge',
+  'worrier',
+  'assasin',
+  'caster',
+  'bear',
+  'alexander',
+  'individual',
+  'soul',
+  'centurion',
+  'tribe',
+  'pirate',
+  'wolf',
+  'rogues',
+  'white',
+  'feral',
+  'death',
+  'mages',
+  'partial',
+  'spartan',
+  'the',
+  'human',
+  'defender',
+  'apprentice',
+  'poet',
+  'scholar',
+  'militant',
+  'hostility',
+  'belligerency',
+  'jihad',
+  'wardom',
+  'troll',
+  'wyvern',
+  'mesmer',
+  'flame',
+  'explorer',
+  'fearless',
+  'ecowar',
+  'nonwar',
+  'warless',
+  'warlike',
+  'feudalism',
+  'gunfight',
+  'man',
+  'duelist',
+  'warmonger',
+  'vassals',
+  'cyberwar',
+  'foe',
+  'paratrooper',
+  'army',
+  'enmity',
+  'trophæal',
+  'battailant',
+  'aggression',
+  'dogfight',
+  'religion',
+  'fight',
+  'knights',
+  'nobility',
+  'faith',
+  'battleground',
+  'soldierly',
+  'battleful',
+  'bombardon',
+  'adversary',
+  'rajputs',
+  'battlefield',
+  'cyberbattle',
+  'batful',
+  'tropæum',
+  'conflict',
+  'infantryman',
+  'minibattle',
+  'gunbattle',
+  'overbattle',
+  'amazons',
+  'duel',
+  'mythical',
+  'culture',
+  'warplane',
+  'battlesuit',
+  'combative',
+  'tiger',
+  'tussle',
+  'violence',
+  'horseman',
+  'blitzkrieg',
+  'wartime',
+  'serpent',
+  'martian',
+  'beloved',
+  'grenade',
+  'legendary',
+  'nicknamed',
+  'ghost',
+  'guardsman',
+  'warclub',
+  'beasts',
+  'armageddon',
+  'feudal',
+  'gurkha',
+  'creature',
+  'aggressive',
+  'skirmish',
+  'struggle',
+  'lion',
+  'gods',
+  'polemology',
+  'nomad',
+  'evil',
+  'tribalsociety',
+  'chieftain',
+  'truculent',
+  'disarmament',
+  'ape',
+  'horse',
+  'nickname',
+  'robot',
+  'valiant',
+  'government',
+  'flanker',
+  'siamese',
+  'khalsa',
+  'resistor',
+  'host',
+
+
+
+
+          
+        ];
+
+        const randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+        const randomNoun = nouns[Math.floor(Math.random() * nouns.length)];
+      
+        const randomNumber = Math.floor(Math.random() * 100);
+
+        
+        
+        
+        return randomAdjective + '' + randomNoun + '' + randomNumber;
+      }
+
+      const generateButton = document.getElementById('generate-button');
+      const usernameElement = document.getElementById('username');
+
+      generateButton.addEventListener('click', function() {
+        const username = generateUsername();
+        usernameElement.textContent = username;
+      });
+    </script>
+    
+    
+    
+      </body>
+      
+      </html>
+
+      <style>
+        body {
+          margin: 0;
+          background-color: #0a1c2e;
+          font-family: arial;
+        }
+      
+        header {
+          background-color: #0d263f;
+          color: white;
+          padding: 16px;
+          text-align: center;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+          width: 100%;
+          height: 100%;
+        }
+      
+        nav li {
+          display: inline;
+          align-items: center;
+        }
+      
+        nav li a {
+          padding: 5px 10px;
+          display: inline-block;
+          text-decoration: none;
+          color: #ff7b00;
+          font-weight: bold;
+          margin-right: 10px; /* Added right margin to create space between navigation items */
+        }
+      
+        a:hover {
+          color: white;
+          background-color: #072440;
+        }
+      
+        footer {
+          position: fixed;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          color: white;
+          text-align: center;
+          padding-top: 20px;
+          padding-bottom: 30px;
+          background-color: #0a141f;
+          padding: 50px 50px;
+        }
+      
+        main {
+          text-align: center;
+          padding: 20px;
+        }
+      
+        #generate-button {
+          background-color: #ff7b00;
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          border-radius: 10px;
+          margin-top: 20px;
+          cursor: pointer;
+        }
+      
+        #username {
+          font-size: 24px;
+          color: white;
+          font-weight: bold;
+          background-color: #0a141f;
+          padding: 10px 15px 15px;
+          border: 2px solid #0d263f;
+          width: 40%;
+          margin: 0 auto; /* Center the username element */
+        }
+      
+        #generate-button:hover {
+          background-color: orange;
+        }
+      </style>
