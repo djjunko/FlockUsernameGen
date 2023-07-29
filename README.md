@@ -20,20 +20,8 @@ The FlockUsernameGen is a simple utility that generates creative and memorable u
 
 To generate a username, simply click the "Generate" button. The generated username will be displayed below the button.
 
-```html
-<button id="generate-button"><strong>Generate</strong></button>
-<p id="username"></p>
-To customize the adjectives and nouns used for username generation, you can edit the adjectives and nouns arrays in the script section of index.html.
+![readme](https://github.com/djjunko/FlockUsernameGen/assets/92181429/7f581f30-58e3-4e44-916d-6e74617e14ee)
 
-javascript
-Copy code
-const adjectives = ['happy', 'silly', 'curious', /* Add your adjectives here */];
-const nouns = ['fighter', 'rogue', 'knight', /* Add your nouns here */];
-Contributing
-Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request. For major changes, please open an issue first to discuss the changes.
-
-License
-Djjunko
 
 
 
